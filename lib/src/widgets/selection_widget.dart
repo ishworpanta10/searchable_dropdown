@@ -184,17 +184,17 @@ class SelectionWidgetState<T> extends State<SelectionWidget<T>> {
 
   ///validation of selected items
   void onValidate() {
-    closePopup();
+    // closePopup();
     if (widget.onChanged != null) widget.onChanged!(_selectedItems);
   }
 
   ///close popup
-  void closePopup() {
-    // if can pop up only pop
-    if (Navigator.of(context).canPop()) {
-      Navigator.pop(context);
-    }
-  }
+  // void closePopup() {
+  //   // if can pop up only pop
+  //   if (Navigator.of(context).canPop()) {
+  //     Navigator.pop(context);
+  //   }
+  // }
 
   Widget _multiSelectionValidation() {
     if (!widget.isMultiSelectionMode) return SizedBox.shrink();
@@ -572,7 +572,7 @@ class SelectionWidgetState<T> extends State<SelectionWidget<T>> {
         if (widget.popupProps.onItemAdded != null) widget.popupProps.onItemAdded!(_selectedItems, newSelectedItem);
       }
     } else {
-      closePopup();
+      // closePopup();
       if (widget.onChanged != null) widget.onChanged!(List.filled(1, newSelectedItem));
     }
   }
