@@ -136,8 +136,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           hintText: "Select an Int",
                         ),
                       ),
-                      popupProps: PopupProps.bottomSheet(
-                          bottomSheetProps: BottomSheetProps(elevation: 16, backgroundColor: Color(0xFFAADCEE))),
+                      popupProps: PopupProps.bottomSheet(bottomSheetProps: BottomSheetProps(elevation: 16, backgroundColor: Color(0xFFAADCEE))),
                     ),
                   ),
                   Padding(padding: EdgeInsets.all(4)),
@@ -200,9 +199,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             return Container(
                               padding: EdgeInsets.symmetric(horizontal: 8, vertical: 6),
                               decoration: BoxDecoration(
-                                  border: Border.all(color: Colors.grey),
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: Colors.grey[100]),
+                                  border: Border.all(color: Colors.grey), borderRadius: BorderRadius.circular(10), color: Colors.grey[100]),
                               child: Row(
                                 children: [
                                   Text(
@@ -340,7 +337,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     child: OutlinedButton(
                                       onPressed: () {
                                         // How should I unselect all items in the list?
-                                        _multiKey.currentState?.closeDropDownSearch();
+                                        // _multiKey.currentState?.closeDropDownSearch();
                                       },
                                       child: const Text('Cancel'),
                                     ),
